@@ -8,7 +8,7 @@ const port = process.env.PORT || 3000;
 // Middleware
 app.use(
   cors({
-    origin: "http://localhost:3000", // Allow your frontend
+    origin: "http://localhost:3000",
     methods: ["POST", "GET"],
     allowedHeaders: ["Content-Type"],
   })

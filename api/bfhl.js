@@ -6,7 +6,13 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 // Middleware
-app.use(cors());
+app.use(
+  cors({
+    origin: "http://localhost:3000", // Allow your frontend
+    methods: ["POST", "GET"],
+    allowedHeaders: ["Content-Type"],
+  })
+);
 app.use(bodyParser.json());
 
 // Utility function to check file validity

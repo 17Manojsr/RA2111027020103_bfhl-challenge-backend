@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/bfhl.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/bfhl",
+      "methods": ["GET", "POST"],
+      "dest": "api/bfhl.js"
+    }
+  ]
+}

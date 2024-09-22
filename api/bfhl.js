@@ -6,13 +6,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 // Middleware
-app.use(
-  cors({
-    origin: "*",
-    methods: ["POST", "GET"],
-    allowedHeaders: ["Content-Type"],
-  })
-);
+app.use(cors()); // Allow requests from all origins
 app.use(bodyParser.json());
 
 // Utility function to check file validity
